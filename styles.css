@@ -1,0 +1,109 @@
+
+:root {
+       --background: #0c0c0c;
+       --foreground: #bfbfbf;
+       --dirs: #00ff00;
+       --files: #bfbfbf;
+       --intro: #bfbfbf;
+       --prompt: #bfbfbf;
+       --input: #bfbfbf;
+       --cursor: #bfbfbf;
+       --output: #bfbfbf;
+       --error: #ff6666;
+   }
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.terminal {
+    padding: 15px;
+    height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+
+h1 {
+    color: #00ff00;
+}
+
+a {
+    color: #57f7ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+    color: #c0c0c0;
+}
+
+.prompt  {
+    color: var(--prompt);
+    display: inline;
+    line-height: 25px;
+    visibility: visible;
+}
+
+.input-line {
+    color: var(--input);
+    display: inline;
+    line-height: 25px;
+    visibility: visible;
+}
+
+.intro-text {
+    color: var(--intro);
+}
+
+.dir {
+    color: var(--dirs);
+}
+
+.file {
+    color: var(--files);
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.cursor {
+    height: 1.5em;
+    background-color: var(--cursor);
+    color: var(--background);
+    animation: blink 1s steps(1) infinite;
+    display: inline-block;
+    width: 10px;
+    vertical-align: top;
+}
+
+@keyframes blink {
+    50% { 
+        background-color: transparent; 
+        color: var(--foreground); 
+    }
+}
+
+.output {
+    color: var(--output);
+}
+
+.error {
+    color: var(--error);
+}
